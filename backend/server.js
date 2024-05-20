@@ -6,16 +6,20 @@ mongoose.connect(process.env.DATABASE_URL);
 
 const app = express();
 const db = mongoose.connection;
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://task-management-app-virid-zeta.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 app.use(express.json());
-db.on("error",(err)=>console.log(err));
-db.on("open",()=>console.log("DATABASE CONNECTED"));
+db.on("error", (err) => console.log(err));
+db.on("open", () => console.log("DATABASE CONNECTED"));
 
 const tasRouter = require("./routes/tasks");
-app.use("/api/tasks",tasRouter)
+app.use("/api/tasks", tasRouter);
 
-
-
-
-
-app.listen(process.env.PORT,()=>console.log(`server is listening at port ${process.env.PORT}`));
+app.listen(process.env.PORT, () =>
+  console.log(`server is listening at port ${process.env.PORT}`)
+);
