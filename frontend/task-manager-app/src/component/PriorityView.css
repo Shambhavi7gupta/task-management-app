@@ -1,0 +1,30 @@
+#PriorityView {
+    padding: 20px;
+  }
+  
+  .priority-tables {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .priority-table {
+    width: 30%;
+    margin: 10px;
+  }
+  
+  .priority-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .priority-table th, .priority-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .priority-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
