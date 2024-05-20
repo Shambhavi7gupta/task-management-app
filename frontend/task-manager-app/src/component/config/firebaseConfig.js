@@ -12,12 +12,12 @@ import { getAuth } from "firebase/auth";
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyC5EByaiFBmTl92XaYoBGOfctfDQyrYTx4",
-  authDomain: "fir-frontend-11737.firebaseapp.com",
-  projectId: "fir-frontend-11737",
-  storageBucket: "fir-frontend-11737.appspot.com",
-  messagingSenderId: "480048431474",
-  appId: "1:480048431474:web:49e2253015e19db6f01deb",
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
 };
 
 const app = initializeApp(firebaseConfig);
